@@ -1,0 +1,22 @@
+<h1>Sign In Here</h1>
+
+<!-- Here is where you will have the ng-show and ng-hide to toggle back and forth between signing in and signing out buttons. Refer to two-way binding lesson on this -->
+
+<ul>
+<li ng-repeat"student in students">
+
+	<!-- Shows Sign In button next to student's name if student is present -->
+	<span ng-click="attendance = true" ng-hide="attendance" ng-model="student.name">
+	{{ student.name }} <a ng-click="signIn(student)"><button>Sign In</button></a>
+    </span>
+
+    <!-- Shows Sign Out button next to student's name when student is leaving for the day -->
+    <span ng-show="attendance" ng-submit="attendance= false" ng-model="student.name">
+	{{ student.name }} <a ng-click="signOut(student)"><button>Sign Out</button></a>
+    </span>
+</li>
+
+
+</ul>
+
+<div ui-view></div>

@@ -3,7 +3,7 @@ signIn.factory('StudentFactory', function StudentFactory() {
 	factory.students = [];
 
 	factory.addStudent = function(newName) {
-		this.students.push({ name: newName, attendance = false});
+		this.students.push({ name: newName, attendance: false});
 	};
 
 	factory.deleteStudent = function(student) {

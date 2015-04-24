@@ -8,19 +8,19 @@ signIn.config(function($stateProvider) {
 		controller: 'StudentCtrl'
 	});
 
-stateProvider.state('signin', {
-	url: "signin",
-	templateUrl: 'partials/signin.html',
-	controller: 'StudentCtrl'
+	$stateProvider.state('signin', {
+		url: "signin",
+		templateUrl: 'partials/signin.html',
+		controller: 'StudentCtrl'
 
-	});
+		});
 
-stateProvider.state('whosthere', {
-	url: "whosethere",
-	templateUrl: 'partials/whosethere.html',
-	controller: 'StudentCtrl'
+	$stateProvider.state('whosthere', {
+		url: "whosethere",
+		templateUrl: 'partials/whosethere.html',
+		controller: 'StudentCtrl'
 
-	});
+		});
 
 });
 
