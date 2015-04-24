@@ -11,6 +11,14 @@ signIn.factory('StudentFactory', function StudentFactory() {
 		this.students.splice(index, 1);
 	};
 
+	factory.signIn = function(student) {
+		student.attendence = true;
+	}
+
+	factory.signOut = function(student) {
+		student.attendence = false;
+	};
+
 	factory.updateAttendance = function(student) {
 		student.attendance = true;
 	};

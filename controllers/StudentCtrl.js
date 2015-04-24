@@ -1,9 +1,8 @@
 signIn.controller('StudentCtrl', function StudentCtrl($scope, StudentFactory) {
 	$scope.students = StudentFactory.students;
-	$scope.StudentFactory = StudentFactory;
 
 	$scope.addStudent = function() {
-		var name = student.studentName;
+		var name = $scope.studentName;
 		StudentFactory.addStudent(name);
 		$scope.studentName = null;
 	};
@@ -13,11 +12,5 @@ signIn.controller('StudentCtrl', function StudentCtrl($scope, StudentFactory) {
 		StudentFactory.deleteStudent(name);
 	}; 
 
-	$scope.signIn = function(student) {
-		student.attendence = true;
-	};
 
-	$scope.signOut = function(student) {
-		student.attendence = false;
-	};
 });
